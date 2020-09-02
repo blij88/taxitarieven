@@ -1,0 +1,157 @@
+﻿namespace taxi
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.distance = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCalc = new System.Windows.Forms.Button();
+            this.arrival = new System.Windows.Forms.DateTimePicker();
+            this.departure = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.distance)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "vertrektijd";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "aankomsttijd";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(23, 116);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(145, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // distance
+            // 
+            this.distance.Location = new System.Drawing.Point(91, 69);
+            this.distance.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.distance.Name = "distance";
+            this.distance.Size = new System.Drawing.Size(65, 20);
+            this.distance.TabIndex = 5;
+            this.distance.ValueChanged += new System.EventHandler(this.distance_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(43, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "afstand";
+            // 
+            // btnCalc
+            // 
+            this.btnCalc.Location = new System.Drawing.Point(23, 155);
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.Size = new System.Drawing.Size(145, 35);
+            this.btnCalc.TabIndex = 7;
+            this.btnCalc.Text = "bereken tarief";
+            this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
+            // 
+            // arrival
+            // 
+            this.arrival.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arrival.CustomFormat = "dd HH:mm";
+            this.arrival.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.arrival.Location = new System.Drawing.Point(91, 29);
+            this.arrival.Name = "arrival";
+            this.arrival.ShowUpDown = true;
+            this.arrival.Size = new System.Drawing.Size(77, 20);
+            this.arrival.TabIndex = 8;
+            this.arrival.Value = new System.DateTime(2020, 9, 2, 14, 6, 13, 0);
+            this.arrival.ValueChanged += new System.EventHandler(this.arrival_ValueChanged);
+            // 
+            // departure
+            // 
+            this.departure.CalendarForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.departure.CustomFormat = "dd HH:mm";
+            this.departure.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.departure.Location = new System.Drawing.Point(91, 3);
+            this.departure.Name = "departure";
+            this.departure.ShowUpDown = true;
+            this.departure.Size = new System.Drawing.Size(77, 20);
+            this.departure.TabIndex = 9;
+            this.departure.Value = new System.DateTime(2020, 9, 2, 14, 6, 19, 0);
+            this.departure.ValueChanged += new System.EventHandler(this.departure_ValueChanged);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(202, 250);
+            this.Controls.Add(this.departure);
+            this.Controls.Add(this.arrival);
+            this.Controls.Add(this.btnCalc);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.distance);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "Form1";
+            this.Text = "tarief berekenen";
+            ((System.ComponentModel.ISupportInitialize)(this.distance)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown distance;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnCalc;
+        private System.Windows.Forms.DateTimePicker arrival;
+        private System.Windows.Forms.DateTimePicker departure;
+    }
+}
+
