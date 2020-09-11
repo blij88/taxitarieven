@@ -48,7 +48,7 @@ namespace taxi
             if (isWeekend == true)
             {
                 string Total = ((kmPrice + rideprice) * (decimal)1.15).ToString("F");
-                textBox1.Text += "\r\ngereden kilometers: " + dist.ToString() +"\r\nTotaal = €"+Total;
+                textBox1.Text += "gereden kilometers: " + dist.ToString() +"\r\nTotaal = €"+Total;
             }
             else
             {
@@ -95,9 +95,9 @@ namespace taxi
             decimal timeIn = rideLength - totalTimeOut;
             decimal inPrice = timeIn * inTariff;
             decimal totalTimePrice = inPrice + outPrice;
-            textBox1.Text = "totale ritduur in minuten: " + rideLength.ToString();
-            textBox1.Text += "\r\nminuten buiten de daluren: " + totalTimeOut.ToString() + "\r\nprijs = " + outPrice.ToString();
-            textBox1.Text += "\r\nminuten binnen daluren = " + timeIn.ToString()+ "\r\nPrijs = " + inPrice  ;
+            textBox1.Text = "totale ritduur in minuten: " + rideLength.ToString("F");
+            textBox1.Text += "\r\nminuten buiten de daluren: " + totalTimeOut.ToString("F") + "\r\nprijs = " + outPrice.ToString();
+            textBox1.Text += "\r\nminuten binnen daluren = " + timeIn.ToString("F")+ "\r\nPrijs = " + inPrice  ;
             return totalTimePrice;
             
         }
@@ -105,6 +105,12 @@ namespace taxi
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            departure.Value = DateTime.Now;
+            arrival.Value = DateTime.Now;
         }
 
         public bool IsWeekend(DateTime depart)
